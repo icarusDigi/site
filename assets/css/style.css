@@ -472,6 +472,18 @@ body.nav-active { overflow: hidden; }
   transition: var(--transition-1);
 }
 
+.contact-form-section .input-wrapper {
+    position: relative;
+  padding: 10px;
+  padding-inline-start: 20px;
+  background-color: var(--bg-prussian-blue);
+  border-radius: var(--radius-6);
+  border: 1px solid var(--bg-carolina-blue);
+
+  justify-items: flex-end;
+  transition: var(--transition-1);
+}
+
 .hero .input-field { padding-inline-end: 5px; }
 
 .hero-banner { position: relative; }
@@ -951,7 +963,7 @@ body.nav-active { overflow: hidden; }
 
 .back-top-btn {
   position: fixed;
-  bottom: 20px;
+  bottom: 90px;
   right: 20px;
   width: 50px;
   height: 50px;
@@ -1255,7 +1267,34 @@ body.nav-active { overflow: hidden; }
 
 }
 
+/**
+Whatsapp
+*/
 
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 20px;
+  width: 155px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,.3);
+  z-index: 999;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 14px rgba(0,0,0,.35);
+}
+
+.whatsapp-float img {
+  width: 28px;
+  height: auto;
+  display: block;
+}
 
 
 
@@ -1336,4 +1375,145 @@ body.nav-active { overflow: hidden; }
     padding-inline: 120px;
   }
 
+
+
+
 }
+
+/* ================= CONTACT PAGE ================= */
+
+.contact-page {
+  background: linear-gradient(135deg, #0b1220, #0e1a33);
+  color: #e6ecff;
+}
+
+/* ---------- WHATSAPP SECTION ---------- */
+
+.contact-whatsapp {
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.contact-whatsapp h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.contact-whatsapp p {
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  color: #b8c3ff;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #25d366, #1ebe5d);
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+/* ---------- CONTACT FORM SECTION ---------- */
+
+.contact-form-section {
+  padding: 6rem 1.5rem;
+}
+
+.contact-form-section h2 {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.section-intro {
+  max-width: 680px;
+  margin: 1rem auto 3rem;
+  text-align: center;
+  color: #aab4ff;
+}
+
+.contact-form {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 3rem;
+  border-radius: 22px;
+  backdrop-filter: blur(10px);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(10, 20, 40, 0.7);
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8fa1ff;
+}
+
+.contact-form textarea {
+  margin-top: 1.2rem;
+  resize: none;
+}
+
+.submit-btn {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1.1rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #2b6bff, #6a5cff);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+ 
+}
+
+/* ---------- GOOGLE MAP SECTION ---------- */
+
+.contact-map {
+  width: 100%;
+  height: 450px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-map {
+    height: 320px;
+  }
+}
+
